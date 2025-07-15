@@ -1,0 +1,5 @@
+/home/cerph/ceRV32/src/core_tb.v
+/home/cerph/ceRV32/src/soc.v
+/home/cerph/ceRV32/src/RV32IM_core.v
+/home/cerph/ceRV32/src/memory.v
+
