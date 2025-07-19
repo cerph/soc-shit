@@ -1,0 +1,56 @@
+// module int_ctrl (
+//     input clk_i,
+//     input rst_i,
+
+//     // peripheral IRQs
+//     input  [7:0]  irq_i,     // one bit per peripheral ID
+//     input  [31:0] csr_ier,
+//     output        irq_o,     // master line to CPU
+//     output [2:0]  irq_id_o,  // current (highest priority) IRQ ID
+
+//     // bus 
+//     input         wstb_i,
+//     input  [3:0]  addr_i,
+//     input  [7:0]  data_i,
+//     output [7:0]  data_o
+// );
+
+// wire [7:0] masked_irq = irq_i & csr_ier;
+
+// reg irq_out;
+// reg [2:0] curr_id;
+
+// // priority encoder (lowest index = highest priority)
+// always @(*) begin
+//     casex (masked_irq)
+//         8'b1xxxxxxx: begin irq_out = 1; curr_id = 3'd7; end
+//         8'b01xxxxxx: begin irq_out = 1; curr_id = 3'd6; end
+//         8'b001xxxxx: begin irq_out = 1; curr_id = 3'd5; end
+//         8'b0001xxxx: begin irq_out = 1; curr_id = 3'd4; end
+//         8'b00001xxx: begin irq_out = 1; curr_id = 3'd3; end
+//         8'b000001xx: begin irq_out = 1; curr_id = 3'd2; end
+//         8'b0000001x: begin irq_out = 1; curr_id = 3'd1; end
+//         8'b00000001: begin irq_out = 1; curr_id = 3'd0; end
+//         default: begin irq_out = 0; curr_id = 3'd0; end
+//     endcase
+// end
+
+// assign irq_o = irq_out;
+// assign irq_id_o = curr_id;
+
+// reg [7:0] rdata;
+// always @(*) begin
+
+
+
+
+//     case (addr_i)
+//         4'h8: rdata = {5'b0, curr_id};         // IRR
+//         default: rdata = 8'bx;
+//     endcase
+// end
+
+// assign data_o = rdata;
+
+
+// endmodule

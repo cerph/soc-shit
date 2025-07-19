@@ -1,0 +1,35 @@
+{
+	"folders": [
+        {
+            "path": "../home/cerph/ceRV32/src"
+        }
+    ],
+    "settings": {
+        "editor.rulers": [
+            {
+                "column": 28,
+                "color": "#00000000"
+            },
+            {
+                "column": 40,
+                "color": "#00000000"
+            },
+            {
+                "column": 73,
+                "color": "#ff000015"
+            }
+        ],
+        "tabruler.rulerLocations": [
+            28,
+            40,
+            73
+        ],
+        "tabruler.startComment": false,
+        "tabruler.rulerColors": [
+            "#00000000",
+            "#00000000",
+            "#ff000015"
+        ],
+        "editor.guides.indentation": false
+    }
+}
